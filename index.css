@@ -1,0 +1,141 @@
+#logo {
+	font-family: Montserrat;
+	font-weight: 900;
+	line-height: 32px;
+	text-align: left;
+}
+
+#navbarNav {
+	font-family: Montserrat;
+	font-weight: 500;
+	line-height: 24px;
+	text-align: left;
+}
+
+#landing h2 {
+	font-family: Montserrat;
+	font-weight: 900;
+	line-height: 32px;
+	text-align: left;
+
+	color: #FFFFFF;
+}
+
+#landing h4 {
+	font-family: Montserrat;
+	font-weight: 700;
+	line-height: 32px;
+	text-align: left;
+
+	color: #CD0000;
+}
+
+#landing p {
+	font-family: Montserrat;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 24px;
+	text-align: left;
+	color: #FFFFFF;
+}
+
+#landing img {
+	width: 300px;
+	border: 5px solid black;
+}
+
+#projects h1 {
+	font-family: Montserrat;
+	font-weight: 900;
+	line-height: 32px;
+	text-align: left;
+
+	color: #FFFFFF;
+}
+
+#tools h1 {
+	font-family: Montserrat;
+	font-weight: 900;
+	line-height: 32px;
+	text-align: left;
+
+	color: #FFFFFF;
+}
+
+#tools h3 {
+	font-family: Montserrat;
+	font-weight: 900;
+	line-height: 32px;
+	text-align: left;
+
+	color: #FFFFFF;
+}
+
+#contact h1 {
+	font-family: Montserrat;
+	font-weight: 900;
+	line-height: 32px;
+	text-align: left;
+	color: #FFFFFF;
+}
+
+.fa-solid, .fa-brands {
+	font-size: 25px;
+	color: black;
+	/* top right bottom left 	*/
+	margin: 0 10px 0 10px;
+}
+
+.fa-solid:hover, .fa-brands:hover {
+	color: red;
+}
+
+#message h4 {
+	font-family: Montserrat;
+	font-weight: 700;
+	line-height: 32px;
+	text-align: left;
+
+	color: #FFFFFF;
+}
+
+#contact form label {
+	font-family: Montserrat;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 24.38px;
+	text-align: left;
+
+	color: #FFFFFF;
+}
+
+#contact form textarea {
+	background: #FFFFFF;
+	font-family: Montserrat;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 29.26px;
+	align-items: center;
+}
+
+#form-btn {
+	padding: 8px 24px 8px 24px;
+	gap: 8px;
+	border-radius: 2px 0px 0px 0px;
+	background: #CD0000;
+
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 24px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+footer {
+	font-family: Montserrat;
+	font-weight: 500;
+	line-height: 24px;
+	text-align: left;
+	color: #FFFFFF;
+}

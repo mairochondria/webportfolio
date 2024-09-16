@@ -132,6 +132,18 @@
 	color: #FFFFFF;
 }
 
+#card1 {
+	width: 18rem;
+}
+
+#card2 {
+	width: 18rem;
+}
+
+#card3 {
+	width: 18rem;
+}
+
 footer {
 	font-family: Montserrat;
 	font-weight: 500;

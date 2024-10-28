@@ -7,6 +7,7 @@
 
 		<!-- External CSS -->
 		<link rel="stylesheet" type="text/css" href="./index.css">
+		<link rel="stylesheet" type="text/css" href="./styling/Navbar.css">
 
 		<!-- Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -14,23 +15,33 @@
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700;900&display=swap" rel="stylesheet">
 	</head>
 	<body class="d-flex flex-column min-vh-100" id="top">
 		<main class="flex-grow-1">
 			<!-- Navbar -->
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg navbar-dark py-3">
+				<div class="container">
 					<a class="navbar-brand" href="#top" id="logo">MAIRO</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNav">
-						<div class="navbar-nav ms-auto">	
-							<a class="nav-link" href="#top">Home</a>
-							<a class="nav-link" href="#projects">Projects</a>
-							<a class="nav-link" href="#tools">Tools</a>
-							<a class="nav-link" href="#contact">Contact</a>
+						<div class="navbar-nav ms-auto flex-column full-screen-nav">
+						    <ul class="navbar-nav">
+						        <li class="nav-item nav-link-spacing">
+						            <a class="nav-link nav-link-animation" href="#landing">Home</a>
+						        </li>
+						        <li class="nav-item nav-link-spacing">
+						            <a class="nav-link nav-link-animation" href="#projects">Projects</a>
+						        </li>
+						        <li class="nav-item nav-link-spacing">
+						            <a class="nav-link nav-link-animation" href="#tools">Skills</a>
+						        </li>
+						        <li class="nav-item nav-link-spacing">
+						            <a class="nav-link nav-link-animation" href="#contact">Contact</a>
+						        </li>
+						    </ul>
 						</div>
 					</div>
 				</div>
@@ -38,34 +49,35 @@
 			<!-- End of Navbar -->
 
 			<!-- Start of Landing -->
-			<section class="py-5 container-fluid bg-dark text-light" id="landing">
-				<div class="row justify-content-center py-md-5 my-md-5">
-					<div class="col-md-3 my-5 my-md-0 d-flex justify-content-center align-items-center">
-						<img src="./images/me.jpg" class="img-fluid rounded-circle">
-					</div>
-					<div class="col-md-7 mx-4 px-5 mt-md-5" id="text-title">
-						<h2>
-							Mairo Raymond Raga
-						</h2>
-						<h4 class="mb-4">Full Stack Web Developer</h4>
-						<p>
-							I am a passionate Full Stack Web Developer. I'm commited to creating visually stunning and user-friendly websites. and I'm looking forward to exploring new opportunities to enhance my skills.
-						</p>
-					</div>	
+			<section class="bg-dark text-light" id="landing">
+				<div class="container custom-landing-container">
+				    <div class="row justify-content-center py-md-5 my-5">
+				        <div class="col-md-7" id="text-title">
+				        	<h3 class="mt-3">Hello! I am</h3>
+				            <h2 class="mt-3">Mairo Raymond Raga</h2>
+				            <h4 class="mt-3 mb-3">Full Stack Web Developer</h4>
+				            <p>
+				                I am a passionate Full Stack Web Developer based in the Philippines, committed to creating visually stunning and user-friendly websites. My enthusiasm for web development drives me to explore new opportunities and continuously enhance my skills in building impactful online experiences.
+				            </p>
+				        </div>
+				        <div class="col-md-5 my-5 my-md-0 d-flex justify-content-center align-items-center">
+				            <img src="./images/me.jpg" class="rounded-circle">
+				        </div>
+				    </div>
 				</div>
 			</section>
 			<!-- End of Landing -->
 
 			<!-- Start of Projects -->
-			<section class="bg-secondary text-light p-5" id="projects">
+			<section class="bg-secondary text-light p-4 fade-in-section" id="projects">
 						
-				<h1 class="mb-5 text-center">My Projects</h1>
+				<h1 class="pt-3 py-md-3 text-center">My Projects</h1>
 				<div class="container-fluid">
 					<div class="d-flex flex-wrap justify-content-center gap-4">
 
 						<div class="card" id="card1">
 							<div class="ratio ratio-16x9">
-								<img src="./images/card1.png" class="card-img-top" alt="...">
+								<img src="./images/card1.png" class="card-img-top" alt="..." loading="lazy">
 							</div>
 							<div class="card-body text-dark">
 							    <h5 class="card-title">E-commerce</h5>
@@ -75,7 +87,7 @@
 
 						<div class="card" id="card2">
 							<div class="ratio ratio-16x9">
-								<img src="./images/card2.png" class="card-img-top" alt="...">
+								<img src="./images/card2.png" class="card-img-top" alt="..." loading="lazy">
 							</div>
 							<div class="card-body text-dark">
 							    <h5 class="card-title">Blog</h5>
@@ -85,7 +97,7 @@
 
 						<div class="card" id="card3">
 							<div class="ratio ratio-16x9">
-								<img src="./images/card 3.jpg" class="card-img-top" alt="...">
+								<img src="./images/card 3.jpg" class="card-img-top" alt="..." loading="lazy">
 							</div>
 							<div class="card-body text-dark">
 							    <h5 class="card-title">Online Booking System</h5>
@@ -99,44 +111,73 @@
 			<!-- End of Projects -->
 
 			<!-- Start of Tools Section -->
-		    <section class="container-fluid bg-dark text-light p-5" id="tools">
-		    	<h1 class="pt-5 py-md-5 text-center">Tools</h1>
-		        <h3 class="pt-5 py-md-5 text-center">Front End</h3>
-		        <div class="row d-flex justify-content-center">
-		            <div class="col-6 col-md-2 d-flex justify-content-center">
-		                <img src="./images/html.png" alt="html" class="img-fluid">
+		    <section class="container-fluid bg-dark text-light p-4 fade-in-section" id="tools">
+		        <h1 class="pt-3 py-md-3 text-center">Tools</h1>
+		        <div class="row d-flex justify-content-center" id="tools-container">
+		            <div class="col-md-5 d-flex flex-column align-items-center px-1" id="frontend">
+		                <h3 class="pt-3 py-md-3 text-center">Front End</h3>
+		                <div class="row d-flex justify-content-center gx-1">
+		                    <div class="col-6 d-flex justify-content-center mb-4"> 
+		                        <img src="./images/html.png" alt="html" class="img-fluid"> 
+		                    </div> 
+		                    <div class="col-6 d-flex justify-content-center mb-4"> 
+		                        <img src="./images/css.png" alt="css" class="img-fluid"> 
+		                    </div> 
+		                    <div class="col-6 d-flex justify-content-center mb-4">
+		                        <img src="./images/javascript.png" alt="javascript" class="img-fluid"> 
+		                    </div>
+		                    <div class="col-6 d-flex justify-content-center mb-4">
+		                        <img src="./images/bootstrap.png" alt="bootstrap" class="img-fluid"> 
+		                    </div>
+		                </div>
 		            </div>
-		            <div class="col-6 col-md-2 d-flex justify-content-center">
-		                <img src="./images/css.png" alt="css" class="img-fluid">
-		            </div>
-		            <div class="col-6 col-md-2 d-flex justify-content-center">
-		                <img src="./images/javascript.png" alt="canva" class="img-fluid">
-		            </div>
-		            <div class="col-6 col-md-2 d-flex justify-content-center">
-		                <img src="./images/bootstrap.png" alt="canva" class="img-fluid">
-		            </div>
-		        </div>
-		        <h3 class="pt-5 py-md-5 text-center">MERN</h3>
-		        <div class="row d-flex justify-content-center">
-		            <div class="col-6 col-md-2 d-flex justify-content-center">
-		                <img src="./images/mongodb.png" class="img-fluid">
-		            </div>
-		            <div class="col-6 col-md-2 d-flex justify-content-center">
-		                <img src="./images/expressjs.png" class="img-fluid">
-		            </div>
-		            <div class="col-6 col-md-2 d-flex justify-content-center">
-		                <img src="./images/react.png" class="img-fluid">
-		            </div>
-		            <div class="col-6 col-md-2 d-flex justify-content-center">
-		                <img src="./images/nodejs.png" class="img-fluid">
+		            <div class="col-md-5 d-flex flex-column align-items-center px-1" id="mern"> 
+		                <h3 class="pt-3 py-md-3 text-center">MERN</h3>
+		                <div class="row d-flex justify-content-center gx-1">
+		                    <div class="col-6 d-flex justify-content-center mb-4"> 
+		                        <img src="./images/mongodb.png" class="img-fluid"> 
+		                    </div>
+		                    <div class="col-6 d-flex justify-content-center mb-4">
+		                        <img src="./images/expressjs.png" class="img-fluid"> 
+		                    </div>
+		                    <div class="col-6 d-flex justify-content-center mb-4">
+		                        <img src="./images/react.png" class="img-fluid"> 
+		                    </div>
+		                    <div class="col-6 d-flex justify-content-center mb-4">
+		                        <img src="./images/nodejs.png" class="img-fluid"> 
+		                    </div>
+		                </div>
 		            </div>
 		        </div>
 		    </section>
 	    	<!-- End of Tools Section -->
 
-	    	<!-- Start of Contact Section -->
-		    <section class="container-fluid bg-secondary text-light p-5" id="contact">
-		    	<h1 class="pt-5 py-md-5 text-center mb-4 mb-md-5 mb-lg-2">Contact</h1>
+	    	<section class="container-fluid bg-secondary text-light p-4 fade-in-section" id="contact">
+		        <h1 class="pt-3 py-md-3 text-center">Contact</h1>
+		        <div class="row d-flex justify-content-center" id="tools-container">
+		            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+	                    <form class="form-square w-100">
+							<div class="form-group mb-4">
+							  	<label for="exampleFormControlInput1" class="form-label">Full Name</label>
+							  	<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+							</div>
+							<div class="form-group mb-4">
+							  	<label for="exampleFormControlInput1" class="form-label">Email Address</label>
+							  	<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+							</div>
+							<div class="form-group mb-4">	
+							  	<label for="exampleFormControlTextarea1" class="form-label">Message</label>
+							  	<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+							</div>
+							<div class="d-flex justify-content-center">
+								<button id="form-btn" class="btn">Submit</button>
+							</div>
+						</form>
+	                </div>
+	            </div>
+	        </section>
+
+		    <section class="container-fluid bg-secondary text-light p-4">
 
 		    	<div class="row d-flex justify-content-center">
 		    		<div class="col-12 col-md-8 d-flex justify-content-center gap-3">
@@ -155,31 +196,8 @@
 					</div>
 				</div>
 
-			<section class="container-fluid bg-secondary text-light p-5" id="message">
-		    	<h4 class="text-center">Message Us!</h4>
-
-				<div class="row d-flex justify-content-center">
-	        		<div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-	            		<form class="form-square w-100">
-							<div class="form-group mb-4">
-							  	<label for="exampleFormControlInput1" class="form-label">Full Name</label>
-							  	<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
-							</div>
-							<div class="form-group mb-4">
-							  	<label for="exampleFormControlInput1" class="form-label">Email Address</label>
-							  	<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-							</div>
-							<div class="form-group mb-4">
-							  	<label for="exampleFormControlTextarea1" class="form-label">Message</label>
-							  	<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-							</div>
-							<div class="d-flex justify-content-center">
-								<button id="form-btn" class="btn">Submit</button>
-							</div>
-						</form>	
-					</div>
-				</div>
 		    </section>
+
 		</main>
 
 		<footer class="container-fluid bg-dark text-light text-center pt-3">
@@ -191,5 +209,83 @@
 
 		<!-- Bootstrap Script -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+		<script>
+		    document.addEventListener("DOMContentLoaded", function () {
+		        const sections = document.querySelectorAll(".fade-in-section");
+		        const navbar = document.querySelector(".navbar");
+
+		        // Show the navbar with line animation
+		        setTimeout(() => {
+		            if (navbar) {
+		                navbar.classList.add("show"); // Add "show" class to trigger line animations and reveal content
+		            }
+		        }, 500); // 1-second delay for the navbar
+
+		        // Observe sections after navbar fade-in
+		        setTimeout(() => {
+		            const observer = new IntersectionObserver((entries) => {
+		                entries.forEach(entry => {
+		                    if (entry.isIntersecting) {
+		                        entry.target.classList.add("show");
+		                    }
+		                });
+		            }, { threshold: 0.1 });
+
+		            // Observe each section for fading effect
+		            sections.forEach(section => observer.observe(section));
+		        }, 3000); // Adjusted delay for sections
+		    });
+		</script>
+
+		<script>
+			const navLinks = document.querySelectorAll('.nav-link-animation');
+			const navbarToggler = document.querySelector('.navbar-toggler');
+			const navbarCollapse = document.getElementById('navbarNav');
+			const body = document.body;
+
+			navbarCollapse.addEventListener('shown.bs.collapse', () => {
+			    body.classList.add('no-scroll');
+			});
+
+			navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+			    body.classList.remove('no-scroll');
+			});
+
+			// Handle click on nav links
+			navLinks.forEach(link => {
+			    link.addEventListener('click', (event) => {
+			        if (navbarCollapse.classList.contains('show')) {
+			            // Prevent the default action temporarily
+			            event.preventDefault();
+
+			            // Collapse the navbar
+			            navbarToggler.click(); // Trigger the toggle to collapse
+
+			            // Use a timeout to allow the collapse animation to finish
+			            setTimeout(() => {
+			                // Redirect after the collapse is complete
+			                window.location.href = link.href;
+			            }, 100); // Adjust the timeout duration based on your collapse animation duration
+			        }
+			    });
+			});
+
+			// Add click event to navbar-toggler to trigger animation delay setting
+			navbarToggler.addEventListener('click', () => {
+			    // Reset animation delay when toggler is clicked
+			    handleNavClick();
+			});
+
+			// Set animation delay for nav links
+			function handleNavClick() {
+			    navLinks.forEach((link, index) => {
+			        const initialDelay = 0.3;
+			        const delay = initialDelay + index * 0.2;
+			        link.style.animationDelay = `${delay}s`;
+			    });
+			}
+		</script>
+
 	</body>
 </html>

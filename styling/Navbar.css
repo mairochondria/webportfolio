@@ -1,0 +1,285 @@
+.navbar {
+    background-color: #2d2b3c !important;
+}
+
+#logo {
+	font-family: Montserrat;
+	font-weight: 300;
+	font-size: 35px;
+	line-height: 32px;
+}
+
+#logo {
+	position: relative;
+}
+
+#logo::after {
+	content: '';
+	opacity: 0;
+	transition: all 0.3s ease;
+	height: 4px;
+	width: 0;
+	background-color: #FF0000;
+	position: absolute;
+	bottom: 9px;
+	left: 50%;
+	transform: translateX(-50%);
+	filter: blur(5px);
+}
+
+#logo:hover::after {
+	opacity: 1;
+	width: 100%;
+}
+
+.nav-link {
+	font-family: Montserrat;
+	font-weight: 300;
+	line-height: 24px;	
+	font-size: 20px;	
+	text-align: left;
+}
+
+.nav-link {
+	position: relative;
+}
+
+.nav-link::after {
+	content: '';
+	opacity: 0;
+	transition: all 0.3s ease;
+	height: 4px;
+	width: 0;
+	background-color: #FF0000;
+	position: absolute;
+	bottom: 9px;
+	left: 50%;
+	transform: translateX(-50%);
+	filter: blur(5px);
+}
+
+.nav-link:hover::after {
+	opacity: 1;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+    .nav-link::after {
+        opacity: 0; /* Ensure it remains hidden */
+        width: 0; /* No width to show */
+    }
+
+    .nav-link:hover::after {
+        opacity: 0; /* Disable hover effect */
+        width: 0; /* No width on hover */
+    }
+}
+
+.nav-link-spacing {
+	margin-right: 40px;
+}
+
+.nav-link-spacing:last-child {
+    margin-right: 0 !important;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.7rem !important;
+    }
+
+    .nav-link {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        font-size: 1.7rem !important;
+    }
+
+    .nav-link-spacing {
+        margin-bottom: 80px !important;
+    }
+
+    .nav-link-spacing {
+        margin-right: 40px !important;
+    }
+
+    .nav-link-spacing:last-child {
+        margin-right: 40px !important;
+    }
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Make visible when in view */
+.fade-in-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #dfdfdf !important;
+}
+
+.navbar .navbar-nav,
+.navbar .navbar-brand,
+.navbar .navbar-toggler {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease 2s;
+}
+
+.navbar.show .navbar-nav,
+.navbar.show .navbar-brand {
+    opacity: 1;
+    visibility: visible; /* Make visible when shown */
+    transition-delay: 2s; /* Delay for these elements */
+}
+
+.navbar.show .navbar-toggler {
+    opacity: 1;
+    visibility: visible; /* Make visible when shown */
+    transition: opacity 0.5s ease 2s; /* Delay for hamburger */
+}
+
+/* Animation for line appearing from the center */
+.navbar::before,
+.navbar::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Start in the middle of the navbar */
+    left: 50%;
+    width: 0; /* Start with zero width */
+    height: 2px; /* Thickness of the line */
+    background-color: #FF0000;
+    transform: translateX(-50%);
+    transition: none;
+    opacity: 1;
+}
+
+@keyframes lineExpand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes lineSplitUp {
+    0% {
+        top: 50%;
+        opacity: 1;
+    }
+    100% {
+        top: 0;
+        opacity: 0; /* Fade out line after it splits up */
+    }
+}
+
+@keyframes lineSplitDown {
+    0% {
+        top: 50%;
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0; /* Fade out line after it splits down */
+    }
+}
+
+.navbar.show::before {
+    animation: lineExpand 1s forwards ease, lineSplitUp 1s 1s forwards ease;
+}
+
+.navbar.show::after {
+    animation: lineExpand 1s forwards ease, lineSplitDown 1s 1s forwards ease;
+}
+
+
+@media (max-width: 768px) {
+    .full-screen-nav {
+        position: fixed; /* Make it fixed */
+        top: 71px; /* Align to the top */
+        left: 0; /* Align to the left */
+        right: 0; /* Align to the right */
+        bottom: 0; /* Align to the bottom */
+        background-color: #2d2b3c; /* Optional: darker background */
+        z-index: 1030; /* Ensure it’s on top of other elements */
+        opacity: 0; /* Start hidden */
+        padding-top: 60px;
+        height:  100%;
+        visibility: hidden; /* Start hidden */
+        transition: opacity 0.5s ease; /* Smooth transition for visibility */
+    }
+
+    .no-scroll {
+        overflow: hidden;
+    }
+
+    .navbar-collapse.show .full-screen-nav {
+        opacity: 1; /* Make it visible */
+        visibility: visible; /* Show when navbar is expanded */
+    }
+
+    .nav-link-animation {
+        opacity: 0; /* Start invisible */
+        transform: translateX(-20px); /* Start slightly off-screen */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        animation: fadeIn 0.6s ease-out forwards; /* Transition effects */
+        position: relative;
+    }
+
+    .nav-link-animation::before {
+        content: '';
+        position: absolute;
+        top: 0; /* Align with the top */
+        right: 10%; /* Align with the right */
+        bottom: 0; /* Extend to the bottom */
+        border-top: 3px solid #FF0000; /* Top border */
+        border-right: 3px solid #FF0000; /* Right border */
+        border-bottom: 3px solid #FF0000; /* Bottom border */
+        width: 65vw; /* Full width */
+        opacity: 0; /* Start invisible */
+        transform: translateX(-20px); /* Match link's start position */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Animate with link */
+        animation: fadeInBorder 0.6s ease-out forwards;
+    }
+
+    /*.navbar-collapse.show .nav-link-animation,
+    .navbar-collapse.show .nav-link-animation::before {
+        opacity: 0;
+        transform: translateX(20px);
+    }*/
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(80px);
+        }
+    }
+
+    @keyframes fadeInBorder {
+        0% {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(-148px);
+        }
+    }
+
+    .navbar-collapse {
+        transition: height 0.1s ease !important; /* Ensure this duration matches the timeout */
+    }
+}
+
